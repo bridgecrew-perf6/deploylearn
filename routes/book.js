@@ -4,7 +4,7 @@ const Book = require('../models/book')
 
 
 
-router.post('/book', async(req,res)=>{
+router.post('/api/book', async(req,res)=>{
     const book = new Book(req.body)
     try{
         res.send(book)
@@ -15,7 +15,7 @@ router.post('/book', async(req,res)=>{
     }
 })
 
-router.get('/books',async(req,res) => {
+router.get('/api/books',async(req,res) => {
     try{
         const books= await Book.find({})
      //   const token = await User.generateAuthToken()
