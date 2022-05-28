@@ -15,7 +15,7 @@ router.post('/book', async(req,res)=>{
     }
 })
 
-router.get('/books',  async (req,res) => {
+router.get('/books',async(req,res) => {
     try{
         const books= await Book.find({})
      //   const token = await User.generateAuthToken()
