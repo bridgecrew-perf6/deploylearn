@@ -15,4 +15,15 @@ router.post('/book', async(req,res)=>{
     }
 })
 
+router.get('/books',  async (req,res) => {
+    try{
+        const books= await Book.find({})
+     //   const token = await User.generateAuthToken()
+        res.send(books)
+    }catch (e) {
+        res.status(400).send(e)
+    }
+    
+})
+
 module.exports = router
